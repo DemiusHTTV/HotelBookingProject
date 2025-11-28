@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Отель на Байкале</title>
+    <link rel="stylesheet" href ="assets/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><img src="assets/logo.png" alt="Логотип" width="40"></li>
+                <li>Информация</li>
+                <li>Отели</li>
+                <li>Туры</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="Big-promo">
+            <div class="promo-txt">
+                <h3>Откройте для себя</h3>
+                <h1>Волшебство Байкала</h1>
+                <div class="hr">
+                    <hr>
+                    <span class="arrow-down"></span>
+                </div>
+            </div>
+        </section>
+        
+        <section class="info">
+            <div class="info-container">
+                <div class="info-header">
+                    <h2>Почему Байкал?</h2>
+                    <div class="underline"></div>
+                </div>
+                <div class="info-content">
+                    <div class="info-text">
+                        <p>Байкал — это не просто пейзаж на открытке, это гигантская природная игровая площадка для тех, кто ценит подлинные эмоции.</p>
+                        <p>Лето зовет в походы по бескрайним тропам, где за каждым поворотом открывается новый вид, ослепляющий своей красотой. Осенью тайга вспыхивает золотом, создавая идеальные кадры для вашего альбома.</p>
+                        <p>Зима? Это царство сверкающего льда, катание на хасках и невероятная подледная рыбалка. А весной природа просыпается, и воздух звенит от предвкушения чуда.</p>
+                        <p>Наша база отдыха — ваша надежная штаб-квартира для этих открытий. После дня, полного впечатлений, вас ждет уютный дом, вкусная кухня и баня, смывающая всю усталость.</p>
+                        <p class="highlight">Мы создали все условия, чтобы ваше путешествие к Байкалу стало тем самым отпуском, о котором вы будете вспоминать с восторгом долгие годы.</p>
+                    </div>
+                    <div class="info-features">
+                        <div class="feature-card">
+                            <h4>Природа</h4>
+                            <p>Уникальные ландшафты и чистейший воздух</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>Комфорт</h4>
+                            <p>Уютное проживание с современными удобствами</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>Активный отдых</h4>
+                            <p>Рыбалка, походы и экскурсии круглый год</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>Забота</h4>
+                            <p>Персонал, который сделает ваш отдых идеальным</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="rooms">
+            <div class='grid-rooms'>
+                <div class="current-room">
+                    <div class="img-room">
+                        <img src="" alt="Текущий номер">
+                    </div>
+                    <div class="room-info">
+                        <h3 class="room-title">Эконом</h3>
+                        <p class="room-description">Описание текущего номера...</p>
+                        <div class="room-features">
+                            <span>✓ Wi-Fi</span>
+                            <span>✓ TV</span>
+                            <span>✓ Кондиционер</span>
+                        </div>
+                        <button class="book-btn">Забронировать</button>
+                    </div>
+                </div>
+                
+                <div class="list-room">
+                    <div class="room-preview" data-room="economy">
+                        <div class="img-container">
+                            <div class="img-room-preview economy"></div>
+                            <div class="room-label">Эконом</div>
+                        </div>
+                    </div>
+                    <div class="room-preview" data-room="standard">
+                        <div class="img-container">
+                            <div class="img-room-preview standard"></div>
+                            <div class="room-label">Стандарт</div>
+                        </div>
+                    </div>
+                    <div class="room-preview" data-room="luxury">
+                        <div class="img-container">
+                            <div class="img-room-preview luxury"></div>
+                            <div class="room-label">Люкс</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="tours">
+            <div class="tours-container">
+                <h2>Наши туры</h2>
+                <div class="tours-grid">
+                    <div class="tour-card" data-tour="1">
+                        <div class="tour-img"></div>
+                        <div class="tour-content">
+                            <h3>ОСТРОВ ОЛЬХОН – СЕРДЦЕ БАЙКАЛА</h3>
+                            <button class="tour-details-btn">Подробнее</button>
+                        </div>
+                    </div>
+                    <div class="tour-card" data-tour="2">
+                        <div class="tour-img"></div>
+                        <div class="tour-content">
+                            <h3>МАЛОЕ МОРЕ – ЛАБИРИНТ ОСТРОВОВ</h3>
+                            <button class="tour-details-btn">Подробнее</button>
+                        </div>
+                    </div>
+                    <div class="tour-card" data-tour="3">
+                        <div class="tour-img"></div>
+                        <div class="tour-content">
+                            <h3>ТАЖЕРАНСКАЯ СТЕПЬ И ЗАПАДНОЕ ПОБЕРЕЖЬЕ</h3>
+                            <button class="tour-details-btn">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Модальные окна для туров -->
+    <div id="tour-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title"></h2>
+            <div id="modal-description"></div>
+        </div>
+    </div>
+
+    <!-- Модальное окно для бронирования -->
+    <div id="booking-modal" class="modal">
+        <div class="modal-content booking-modal">
+            <span class="close">&times;</span>
+            <h2>Бронирование номера</h2>
+            <div class="selected-room-info">
+                <h3 id="booking-room-title"></h3>
+                <p id="booking-room-price"></p>
+            </div>
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <button id="prev-month">&lt;</button>
+                    <h3 id="current-month-year"></h3>
+                    <button id="next-month">&gt;</button>
+                </div>
+                <div class="calendar" id="calendar"></div>
+            </div>
+            <div class="booking-summary">
+                <p>Выбранные даты: <span id="selected-dates">Не выбраны</span></p>
+                <p>Количество ночей: <span id="nights-count">0</span></p>
+                <p class="total-price">Итого: <span id="total-price">0</span> руб.</p>
+                <button id="confirm-booking" class="confirm-btn">Подтвердить бронирование</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+       const sectionPromo = document.querySelector('.Big-promo');
+        const stickyHeader = document.querySelector("header");
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    console.log('Пользователь прокрутил промо-секцию!');
+                    stickyHeader.classList.add('show');
+                } else {
+                    stickyHeader.classList.remove("show");
+                    console.log('Промо-секция в зоне видимости');
+                }
+            });
+        }, {
+            threshold: 0.1 
+        });
+
+        observer.observe(sectionPromo);
+
+        
+        let currentDate = new Date();
+        let selectedDates = {
+            start: null,
+            end: null
+        };
+        let currentRoomType = 'economy';
+
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM загружен, скрипт запускается');        
+            
+            const firstPreview = document.querySelector('.room-preview:first-child');
+            if (firstPreview) {
+                firstPreview.classList.add('active');
+                updateRoomDisplay('economy');
+            }
+            
+          
+            document.querySelectorAll(".room-preview").forEach((item) => {
+                item.addEventListener('click', function() {
+                    document.querySelectorAll('.room-preview').forEach(preview => {
+                        preview.classList.remove('active');
+                    });
+                    
+                    this.classList.add("active");
+                    
+                    const roomType = this.getAttribute('data-room');
+                    updateRoomDisplay(roomType);
+                });
+            });
+            
+            // Обработчики для кнопок бронирования
+            document.querySelectorAll('.book-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const roomTitle = document.querySelector('.room-title').textContent;
+                    openBookingModal(roomTitle);
+                });
+            });
+            
+            // Обработчики для кнопок туров
+            document.querySelectorAll('.tour-details-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const tourCard = this.closest('.tour-card');
+                    const tourId = tourCard.getAttribute('data-tour');
+                    openTourModal(tourId);
+                });
+            });
+            
+            // Закрытие модальных окон
+            document.querySelectorAll('.close').forEach(closeBtn => {
+                closeBtn.addEventListener('click', function() {
+                    this.closest('.modal').style.display = 'none';
+                });
+            });
+            
+            // Закрытие модальных окон при клике вне их
+            window.addEventListener('click', function(event) {
+                if (event.target.classList.contains('modal')) {
+                    event.target.style.display = 'none';
+                }
+            });
+            
+            // Кнопки календаря
+            const prevMonthBtn = document.getElementById('prev-month');
+            const nextMonthBtn = document.getElementById('next-month');
+            
+            if (prevMonthBtn) {
+                prevMonthBtn.addEventListener('click', function() {
+                    currentDate.setMonth(currentDate.getMonth() - 1);
+                    renderCalendar();
+                });
+            }
+            
+            if (nextMonthBtn) {
+                nextMonthBtn.addEventListener('click', function() {
+                    currentDate.setMonth(currentDate.getMonth() + 1);
+                    renderCalendar();
+                });
+            }
+            
+            // Инициализация календаря
+            initCalendar();
+            
+            // Обработчик подтверждения бронирования
+            const confirmBtn = document.getElementById('confirm-booking');
+            if (confirmBtn) {
+                confirmBtn.addEventListener('click', function() {
+                    if (selectedDates.start && selectedDates.end) {
+                        alert('Бронирование подтверждено! С вами свяжутся для уточнения деталей.');
+                        document.getElementById('booking-modal').style.display = 'none';
+                    } else {
+                        alert('Пожалуйста, выберите даты заезда и выезда');
+                    }
+                });
+            }
+        });
+
+        // Данные номеров
+        const roomData = {
+            economy: {
+                title: "Эконом",
+                description: "Уютный номер для экономных путешественников. Включает все необходимое для комфортного отдыха после насыщенного дня.",
+                features: ["✓ Wi-Fi", "✓ TV", "✓ Собственная ванная", "✓ Отопление"],
+                price: "от 2 500 ₽/ночь",
+                pricePerNight: 2500
+            },
+            standard: {
+                title: "Стандарт",
+                description: "Просторный номер с современным дизайном. Идеальное сочетание комфорта и функциональности для вашего отдыха.",
+                features: ["✓ Wi-Fi", "✓ Smart TV", "✓ Кондиционер", "✓ Мини-холодильник", "✓ Сейф"],
+                price: "от 4 000 ₽/ночь",
+                pricePerNight: 4000
+            },
+            luxury: {
+                title: "Люкс",
+                description: "Роскошный номер с панорамным видом на Байкал. Просторная гостиная зона, современная техника и эксклюзивный сервис.",
+                features: ["✓ Премиум Wi-Fi", "✓ 4K Smart TV", "✓ Климат-контроль", "✓ Мини-бар", "✓ Сейф", "✓ Халаты и тапочки", "✓ Вид на озеро"],
+                price: "от 7 500 ₽/ночь",
+                pricePerNight: 7500
+            }
+        };
+
+        // Данные туров
+        const tourData = {
+            1: {
+                title: "ОСТРОВ ОЛЬХОН – СЕРДЦЕ БАЙКАЛА",
+                description: `
+                    <h3>Автомобильная экскурсия «От сакрального мыса до северной короны»</h3>
+                    <p><strong>Формат:</strong> Полный день (10 часов).</p>
+                    <p><strong>Тип:</strong> Индивидуальный или групповой тур на комбинированный (УАЗ, микроавтобус, катер).</p>
+                    <h4>Маршрут и программа:</h4>
+                    <ul>
+                        <li>Мыс Кобылья голова</li>
+                        <li>Курыканская стена</li>
+                        <li>Ялгинское озеро</li>
+                        <li>Мыс Бурхан и скала Шаман-камень</li>
+                        <li>Песчанка и шаманский лес с столетними деревьями</li>
+                        <li>Песчаный массив Сагаан-Хушун</li>
+                        <li>Мыс Шунтэ-Левый</li>
+                        <li>Мыс Хобой (кульминация тура)</li>
+                    </ul>
+                    <p><strong>Что включено:</strong> Трансфер от/до Хужира, услуги гида-водителя, обед-пикник на берегу.</p>
+                    <p><strong>Что взять с собой:</strong> Воду, ветровку/куртку (на Хобое всегда ветрено!), головной убор, солнцезащитные очки, фотоаппарат.</p>
+                `
+            },
+            2: {
+                title: "МАЛОЕ МОРЕ – ЛАБИРИНТ ОСТРОВОВ",
+                description: `
+                    <h3>Морская экскурсия на катере «Ожерелье Малого Моря»</h3>
+                    <p><strong>Формат:</strong> 7 часов.</p>
+                    <p><strong>Тип:</strong> Групповая или индивидуальная прогулка на катере</p>
+                    <h4>Маршрут и программа (от причала в пос. Хужир или Курма):</h4>
+                    <ul>
+                        <li>Остров Огой: Подъем к Ступе Просветления</li>
+                        <li>Остров Замогой</li>
+                        <li>Остров Хины (Большой и Малый)</li>
+                        <li>Остров Боракчин (Ольтрек)</li>
+                        <li>Остров Хубын</li>
+                        <li>Купание в одной из бухт: В зависимости от погоды, можно сделать остановку для купания в кристально чистой воде.</li>
+                    </ul>
+                    <p><strong>Что включено:</strong> Прокат катера с капитаном, спасательные жилеты.</p>
+                    <p><strong>Что взять с собой:</strong> Пляжные принадлежности, полотенце, перекус, воду. Не забудьте купальные костюмы!</p>
+                `
+            },
+            3: {
+                title: "ТАЖЕРАНСКАЯ СТЕПЬ И ЗАПАДНОЕ ПОБЕРЕЖЬЕ",
+                description: `
+                    <h3>Автомобильный тур «От пещер до писаниц: дорога древних цивилизаций»</h3>
+                    <p><strong>Формат:</strong> Полный день (10 часов).</p>
+                    <p><strong>Тип:</strong> Тур на внедорожнике.</p>
+                    <h4>Маршрут и программа (старт от переправы на Ольхон или из пос. Еланцы):</h4>
+                    <ul>
+                        <li>Пещеры в бухте Ая Знаменитая «Пещера Мечта»</li>
+                        <li>Тажеранские степи</li>
+                        <li>Поселок Бугульдейка и мраморный карьер</li>
+                        <li>Мыс Саган-Заба: Одна из главных жемчужин Байкала. Древние наскальные рисунки (петроглифы)</li>
+                        <li>Ольхонские ворота (с материковой стороны)</li>
+                    </ul>
+                    <p><strong>Что включено:</strong> Трансфер, услуги гида, обед-пикник.</p>
+                    <p><strong>Что взять с собой:</strong> Удобную обувь для ходьбы по степи и к пещерам, фонарик для осмотра пещер, воду.</p>
+                `
+            }
+        };
+
+        // Функция обновления отображения номера
+        function updateRoomDisplay(roomType) {
+            const room = roomData[roomType];
+            const currentRoom = document.querySelector('.current-room');
+            currentRoomType = roomType;
+            
+            // Обновляем информацию
+            currentRoom.querySelector('.room-title').textContent = room.title;
+            currentRoom.querySelector('.room-description').textContent = room.description;
+            
+            // Обновляем особенности
+            const featuresContainer = currentRoom.querySelector('.room-features');
+            featuresContainer.innerHTML = '';
+            room.features.forEach(feature => {
+                const span = document.createElement('span');
+                span.textContent = feature;
+                featuresContainer.appendChild(span);
+            });
+            
+            // Обновляем кнопку
+            const bookBtn = currentRoom.querySelector('.book-btn');
+            bookBtn.textContent = `Забронировать - ${room.price}`;
+        }
+
+        // Функция открытия модального окна тура
+        function openTourModal(tourId) {
+            const tour = tourData[tourId];
+            const modal = document.getElementById('tour-modal');
+            const title = document.getElementById('modal-title');
+            const description = document.getElementById('modal-description');
+            
+            title.textContent = tour.title;
+            description.innerHTML = tour.description;
+            modal.style.display = 'block';
+        }
+
+        // Функция открытия модального окна бронирования
+        function openBookingModal(roomTitle) {
+            const modal = document.getElementById('booking-modal');
+            const room = roomData[currentRoomType];
+            
+            document.getElementById('booking-room-title').textContent = roomTitle;
+            document.getElementById('booking-room-price').textContent = room.price;
+            
+            // Сброс выбранных дат
+            selectedDates = { start: null, end: null };
+            updateBookingSummary();
+            
+            modal.style.display = 'block';
+            renderCalendar();
+        }
+
+        // Инициализация календаря
+        function initCalendar() {
+            renderCalendar();
+        }
+
+        // Отрисовка календаря
+        function renderCalendar() {
+            const calendar = document.getElementById('calendar');
+            const monthYear = document.getElementById('current-month-year');
+            
+            if (!calendar) return;
+            
+            const year = currentDate.getFullYear();
+            const month = currentDate.getMonth();
+            
+            // Установка заголовка
+            const monthNames = [
+                'Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
+                'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'
+            ];
+            monthYear.textContent = `${monthNames[month]} ${year}`;
+            
+            // Очистка календаря
+            calendar.innerHTML = '';
+            
+            // Добавление заголовков дней недели
+            const daysOfWeek = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
+            daysOfWeek.forEach(day => {
+                const dayElement = document.createElement('div');
+                dayElement.className = 'calendar-day header';
+                dayElement.textContent = day;
+                calendar.appendChild(dayElement);
+            });
+            
+            // Получение первого дня месяца и количества дней
+            const firstDay = new Date(year, month, 1);
+            const lastDay = new Date(year, month + 1, 0);
+            const daysInMonth = lastDay.getDate();
+            
+            // Пустые ячейки перед первым днем месяца
+            const startingDay = firstDay.getDay() === 0 ? 6 : firstDay.getDay() - 1;
+            for (let i = 0; i < startingDay; i++) {
+                const emptyDay = document.createElement('div');
+                emptyDay.className = 'calendar-day other-month';
+                calendar.appendChild(emptyDay);
+            }
+            
+            // Добавление дней месяца
+            for (let day = 1; day <= daysInMonth; day++) {
+                const dayElement = document.createElement('div');
+                dayElement.className = 'calendar-day';
+                dayElement.textContent = day;
+                
+                const currentDay = new Date(year, month, day);
+                
+                // Проверка, является ли день прошедшим
+                const today = new Date();
+                today.setHours(0, 0, 0, 0);
+                if (currentDay < today) {
+                    dayElement.classList.add('other-month');
+                    dayElement.style.opacity = '0.5';
+                } else {
+                    dayElement.addEventListener('click', function() {
+                        handleDateSelection(currentDay);
+                    });
+                    
+                    // Проверка, выбран ли день
+                    if (selectedDates.start && currentDay.getTime() === selectedDates.start.getTime()) {
+                        dayElement.classList.add('selected');
+                    } else if (selectedDates.end && currentDay.getTime() === selectedDates.end.getTime()) {
+                        dayElement.classList.add('selected');
+                    } else if (selectedDates.start && selectedDates.end && 
+                              currentDay > selectedDates.start && currentDay < selectedDates.end) {
+                        dayElement.classList.add('range');
+                    }
+                }
+                
+                calendar.appendChild(dayElement);
+            }
+        }
+
+        // Обработка выбора даты
+        function handleDateSelection(date) {
+            if (!selectedDates.start || (selectedDates.start && selectedDates.end)) {
+                // Первый выбор или сброс выбора
+                selectedDates.start = date;
+                selectedDates.end = null;
+            } else if (selectedDates.start && !selectedDates.end) {
+                // Второй выбор - установка конечной даты
+                if (date > selectedDates.start) {
+                    selectedDates.end = date;
+                } else {
+                    selectedDates.end = selectedDates.start;
+                    selectedDates.start = date;
+                }
+            }
+            
+            updateBookingSummary();
+            renderCalendar();
+        }
+
+        // Обновление сводки бронирования
+        function updateBookingSummary() {
+            const selectedDatesElement = document.getElementById('selected-dates');
+            const nightsCountElement = document.getElementById('nights-count');
+            const totalPriceElement = document.getElementById('total-price');
+            
+            if (selectedDates.start && selectedDates.end) {
+                const nights = Math.ceil((selectedDates.end - selectedDates.start) / (1000 * 60 * 60 * 24));
+                const room = roomData[currentRoomType];
+                const totalPrice = nights * room.pricePerNight;
+                
+                const formatDate = (date) => {
+                    return date.toLocaleDateString('ru-RU');
+                };
+                
+                selectedDatesElement.textContent = `${formatDate(selectedDates.start)} - ${formatDate(selectedDates.end)}`;
+                nightsCountElement.textContent = nights;
+                totalPriceElement.textContent = totalPrice.toLocaleString('ru-RU');
+            } else if (selectedDates.start) {
+                selectedDatesElement.textContent = formatDate(selectedDates.start);
+                nightsCountElement.textContent = '0';
+                totalPriceElement.textContent = '0';
+            } else {
+                selectedDatesElement.textContent = 'Не выбраны';
+                nightsCountElement.textContent = '0';
+                totalPriceElement.textContent = '0';
+            }
+        }
+
+        
+        function formatDate(date) {
+            return date.toLocaleDateString('ru-RU');}
+    </script>
+</body>
+</html>
